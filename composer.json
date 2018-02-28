@@ -1,11 +1,11 @@
 {
-	"name": "anlutro/menu",
-	"description": "Dynamic menu builder.",
+	"name": "bumbummen99/bs4menu",
+	"description": "Dynamic menu builder for Bootstrap 4.",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Andreas Lutro",
-			"email": "anlutro@gmail.com"
+			"name": "Patrick Henninger",
+			"email": "henninger@gmail.com"
 		}
 	],
 	"require": {
@@ -16,7 +16,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"anlutro\\Menu\\": "src/"
+			"bs4menu\\": "src/"
 		}
 	},
 	"minimum-stability": "dev",
