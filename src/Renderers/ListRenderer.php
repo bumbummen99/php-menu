@@ -56,8 +56,9 @@ class ListRenderer implements RendererInterface
 			$submenuLink = $this->renderAnchor($this->getSubmenuTitle($item), '#', $this->getSubmenuAnchorAttributes($item));
 			return $str . $this->renderListItem($submenuLink . $this->renderSubmenu($item->getSubmenu()), $this->getSubmenuItemAttributes($item));
 		}
-
-		return $str . $this->renderListItem($this->renderAnchor($this->getMenuTitle($item), $item->getUrl(), $this->getItemAnchorAttributes($item)));
+        
+        $itemLink = $this->renderAnchor($this->getMenuTitle($item), $item->getUrl(), $this->getItemAnchorAttributes($item));
+		return $str . $this->renderListItem($itemLink, $this->getItemAttributes());
 	}
 
 	protected function renderSubmenu(Collection $menu)
@@ -99,7 +100,7 @@ class ListRenderer implements RendererInterface
 	{
 		$attributes = $menu->getAttributes();
 		if (isset($attributes['id'])) {
-			$attributes['id'] = 'menu--'.$attributes['id'];
+			$attributes['id'] = 'menu-'.$attributes['id'];
 		}
 		return $attributes;
 	}
@@ -108,7 +109,7 @@ class ListRenderer implements RendererInterface
 	{
 		$attributes = $menu->getAttributes();
 		if (isset($attributes['id'])) {
-			$attributes['id'] = 'menu--'.$attributes['id'];
+			$attributes['id'] = 'menu-'.$attributes['id'];
 		}
 		return $attributes;
 	}
@@ -121,9 +122,11 @@ class ListRenderer implements RendererInterface
 	protected function getItemAnchorAttributes(NodeInterface $item)
 	{
 		$attributes = $item->getAttributes();
+        $attributes = $this->mergeAttributes($attributes, [ 'class' => 'nav-link' ]);
 		if (isset($attributes['id'])) {
-			$attributes['id'] = 'menu-item--'.$attributes['id'];
+			$attributes['id'] = 'menu-item-'.$attributes['id'];
 		}
+        
 		return $attributes;
 	}
 
@@ -136,14 +139,19 @@ class ListRenderer implements RendererInterface
 	{
 		$attributes = $item->getAttributes();
 		if (isset($attributes['id'])) {
-			$attributes['id'] = 'menu-item--'.$attributes['id'];
+			$attributes['id'] = 'menu-item-'.$attributes['id'];
 		}
 		return $attributes;
 	}
-
+    
+    protected function getItemAttributes()
+	{
+		return ['class' => 'nav-item'];
+	}
+    
 	protected function getSubmenuItemAttributes(SubmenuNode $item)
 	{
-		return [];
+		return $this->mergeAttributes( [], $this->getItemAttributes() );
 	}
 
 	protected function mergeAttributes(array $attributes, array $defaults)

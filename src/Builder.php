@@ -41,7 +41,7 @@ class Builder
 
 	public function setDefaultRenderer($defaultRenderer)
 	{
-		$this->defaultRenderer = $defaultRenderer ?: __NAMESPACE__.'\Renderers\BS3Renderer';
+		$this->defaultRenderer = $defaultRenderer ?: __NAMESPACE__.'\Renderers\BS4Renderer';
 	}
 
 	/**
@@ -59,6 +59,7 @@ class Builder
 		}
 
 		$attributes['id'] = isset($attributes['id']) ? $attributes['id'] : $key;
+        $attributes['class'] = $key == 'right' ? 'ml-auto' : 'mr-auto';
 
 		return $this->menus[$key] = $this->makeMenuCollection($attributes);
 	}
