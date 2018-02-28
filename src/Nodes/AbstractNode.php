@@ -7,10 +7,10 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu\Nodes;
+namespace bs4menu\Nodes;
 
-use anlutro\Menu\Util\StringUtils;
-use anlutro\Menu\Icons\IconInterface;
+use bs4menu\Util\StringUtils;
+use bs4menu\Icons\IconInterface;
 
 /**
  * A menu item.
@@ -58,10 +58,10 @@ abstract class AbstractNode
 	 * @var array
 	 */
 	protected static $iconResolvers = [
-		'glyph' => 'anlutro\Menu\Icons\Glyphicon',
-		'glyphicon' => 'anlutro\Menu\Icons\Glyphicon',
-		'fa-icon' => 'anlutro\Menu\Icons\FontAwesomeIcon',
-		'fa-stack' => 'anlutro\Menu\Icons\FontAwesomeStack',
+		'glyph' => 'bs4menu\Icons\Glyphicon',
+		'glyphicon' => 'bs4menu\Icons\Glyphicon',
+		'fa-icon' => 'bs4menu\Icons\FontAwesomeIcon',
+		'fa-stack' => 'bs4menu\Icons\FontAwesomeStack',
 	];
 
 	/**

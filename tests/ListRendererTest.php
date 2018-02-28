@@ -1,5 +1,5 @@
 <?php
-namespace anlutro\Menu\Tests;
+namespace bs4menu\Tests;
 
 use PHPUnit_Framework_TestCase;
 
@@ -8,8 +8,8 @@ class ListRendererTest extends PHPUnit_Framework_TestCase
 	/** @test */
 	public function renderFullMenu()
 	{
-		$renderer = new \anlutro\Menu\Renderers\BS3Renderer();
-		$builder = new \anlutro\Menu\Builder();
+		$renderer = new \bs4menu\Renderers\BS3Renderer();
+		$builder = new \bs4menu\Builder();
 		$menu = $builder->createMenu('left');
 		$menu->addItem('Test Item 1', '/url-1', ['class' => 'foo-bar', 'glyph' => 'foo']);
 		$menu->addItem('Test Item 2', '/url-2', ['data-foo' => 'bar', 'fa-icon' => 'bar']);
@@ -30,8 +30,8 @@ class ListRendererTest extends PHPUnit_Framework_TestCase
 	/** @test */
 	public function smartDividers()
 	{
-		$renderer = new \anlutro\Menu\Renderers\BS3Renderer();
-		$builder = new \anlutro\Menu\Builder();
+		$renderer = new \bs4menu\Renderers\BS3Renderer();
+		$builder = new \bs4menu\Builder();
 		$menu = $builder->createMenu('left');
 		$menu->addDivider();
 		$menu->addItem('Test Item 1', '/url-1');
@@ -50,8 +50,8 @@ class ListRendererTest extends PHPUnit_Framework_TestCase
 	/** @test */
 	public function smartDividersAndSubmenus()
 	{
-		$renderer = new \anlutro\Menu\Renderers\BS3Renderer();
-		$builder = new \anlutro\Menu\Builder();
+		$renderer = new \bs4menu\Renderers\BS3Renderer();
+		$builder = new \bs4menu\Builder();
 		$menu = $builder->createMenu('left');
 		$menu->addItem('Test Item 1', '/url-1');
 		$menu->addDivider();
@@ -75,8 +75,8 @@ class ListRendererTest extends PHPUnit_Framework_TestCase
 			</ul>');
 		$this->assertEquals($expected, $correct);
 
-		$renderer = new \anlutro\Menu\Renderers\BS3Renderer();
-		$builder = new \anlutro\Menu\Builder();
+		$renderer = new \bs4menu\Renderers\BS3Renderer();
+		$builder = new \bs4menu\Builder();
 		$menu = $builder->createMenu('left');
 		$menu->addDivider();
 		$menu->addItem('Test Item 1', '/url-1');

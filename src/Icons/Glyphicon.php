@@ -7,7 +7,7 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu\Icons;
+namespace bs4menu\Icons;
 
 class Glyphicon implements IconInterface
 {

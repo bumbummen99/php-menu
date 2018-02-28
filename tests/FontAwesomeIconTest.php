@@ -1,9 +1,9 @@
 <?php
-namespace anlutro\Menu\Tests;
+namespace bs4menu\Tests;
 
 use PHPUnit_Framework_TestCase;
-use anlutro\Menu\Icons\FontAwesomeIcon as Icon;
-use anlutro\Menu\Icons\FontAwesomeStack as Stack;
+use bs4menu\Icons\FontAwesomeIcon as Icon;
+use bs4menu\Icons\FontAwesomeStack as Stack;
 
 class FontAwesomeIconTest extends PHPUnit_Framework_TestCase
 {

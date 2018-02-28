@@ -1,5 +1,5 @@
 <?php
-namespace anlutro\Menu\Tests;
+namespace bs4menu\Tests;
 
 use PHPUnit_Framework_TestCase;
 
@@ -7,7 +7,7 @@ class MenuItemTest extends PHPUnit_Framework_TestCase
 {
 	public function makeItem($title, $url, array $attribs = array())
 	{
-		return new \anlutro\Menu\Nodes\AnchorNode($title, $url, $attribs);
+		return new \bs4menu\Nodes\AnchorNode($title, $url, $attribs);
 	}
 
 	public function testRenderTitleAndUrl()
@@ -26,7 +26,7 @@ class MenuItemTest extends PHPUnit_Framework_TestCase
 
 	public function testCustomIconResolver()
 	{
-		\anlutro\Menu\Nodes\AbstractNode::addIconResolvers(['custom' => __NAMESPACE__.'\CustomIcon']);
+		\bs4menu\Nodes\AbstractNode::addIconResolvers(['custom' => __NAMESPACE__.'\CustomIcon']);
 		$item = $this->makeItem('foo', 'bar', ['custom' => 'baz']);
 		$this->assertInstanceOf(__NAMESPACE__.'\CustomIcon', $item->getIcon());
 		$item = $this->makeItem('foo', 'bar', ['custom' => 'baz', 'glyphicon' => 'baz']);
@@ -34,7 +34,7 @@ class MenuItemTest extends PHPUnit_Framework_TestCase
 	}
 }
 
-class CustomIcon implements \anlutro\Menu\Icons\IconInterface
+class CustomIcon implements \bs4menu\Icons\IconInterface
 {
 	public function render()
 	{

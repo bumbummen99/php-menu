@@ -7,9 +7,9 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu;
+namespace bs4menu;
 
-use anlutro\Menu\Renderers\RendererInterface;
+use bs4menu\Renderers\RendererInterface;
 
 /**
  * The top-level menu builder that contains information about the whole menu
@@ -50,7 +50,7 @@ class Builder
 	 * @param  string $key
 	 * @param  array  $attributes
 	 *
-	 * @return \anlutro\Menu\Collection
+	 * @return \bs4menu\Collection
 	 */
 	public function createMenu($key, array $attributes = array())
 	{
@@ -68,7 +68,7 @@ class Builder
 	 *
 	 * @param  string $key
 	 *
-	 * @return \anlutro\Menu\Collection
+	 * @return \bs4menu\Collection
 	 */
 	public function getMenu($key)
 	{
@@ -171,7 +171,7 @@ class Builder
 	 *
 	 * @param  array  $attributes
 	 *
-	 * @return \anlutro\Menu\Collection
+	 * @return \bs4menu\Collection
 	 */
 	protected function makeMenuCollection(array $attributes)
 	{

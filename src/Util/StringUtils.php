@@ -1,5 +1,5 @@
 <?php
-namespace anlutro\Menu\Util;
+namespace bs4menu\Util;
 
 class StringUtils
 {

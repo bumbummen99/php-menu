@@ -7,12 +7,12 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu\Renderers;
+namespace bs4menu\Renderers;
 
-use anlutro\Menu\Collection;
-use anlutro\Menu\Nodes\DividerNode;
-use anlutro\Menu\Nodes\SubmenuNode;
-use anlutro\Menu\Nodes\NodeInterface;
+use bs4menu\Collection;
+use bs4menu\Nodes\DividerNode;
+use bs4menu\Nodes\SubmenuNode;
+use bs4menu\Nodes\NodeInterface;
 
 class ListRenderer implements RendererInterface
 {

@@ -7,9 +7,9 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu;
+namespace bs4menu;
 
-use anlutro\Menu\Util\StringUtils;
+use bs4menu\Util\StringUtils;
 
 /**
  * A collection of menu items.
@@ -116,7 +116,7 @@ class Collection
 	 * @param  array  $attributes
 	 * @param  int    $location
 	 *
-	 * @return \anlutro\Menu\Nodes\AnchorNode
+	 * @return \bs4menu\Nodes\AnchorNode
 	 */
 	public function addItem($title, $url, array $attributes = array(), $location = null)
 	{
@@ -130,7 +130,7 @@ class Collection
 	 * @param  string $url
 	 * @param  array  $attributes
 	 *
-	 * @return \anlutro\Menu\Nodes\AnchorNode
+	 * @return \bs4menu\Nodes\AnchorNode
 	 */
 	public function makeItem($title, $url, array $attributes = array())
 	{
@@ -144,7 +144,7 @@ class Collection
 	 * @param  array  $attributes
 	 * @param  int    $location
 	 *
-	 * @return \anlutro\Menu\Nodes\SubmenuNode
+	 * @return \bs4menu\Nodes\SubmenuNode
 	 */
 	public function addSubmenu($title, array $attributes = array(), $location = null)
 	{
@@ -157,7 +157,7 @@ class Collection
 	 * @param  string $title
 	 * @param  array  $attributes
 	 *
-	 * @return \anlutro\Menu\Nodes\SubmenuNode
+	 * @return \bs4menu\Nodes\SubmenuNode
 	 */
 	public function makeSubmenu($title, array $attributes = array())
 	{
@@ -183,7 +183,7 @@ class Collection
 	 *
 	 * @param  string $id
 	 *
-	 * @return \anlutro\Menu\Nodes\NodeInterface|null
+	 * @return \bs4menu\Nodes\NodeInterface|null
 	 */
 	public function getItem($id)
 	{

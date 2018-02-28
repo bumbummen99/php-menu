@@ -1,5 +1,5 @@
 <?php
-namespace anlutro\Menu\Tests;
+namespace bs4menu\Tests;
 
 use PHPUnit_Framework_TestCase;
 
@@ -7,7 +7,7 @@ class MenuBuilderTest extends PHPUnit_Framework_TestCase
 {
 	protected function makeBuilder(array $options = array())
 	{
-		return new \anlutro\Menu\Builder($options);
+		return new \bs4menu\Builder($options);
 	}
 
 	public function testCreateMenuIsStored()
@@ -16,7 +16,7 @@ class MenuBuilderTest extends PHPUnit_Framework_TestCase
 		$this->assertFalse($builder->hasMenu('left'));
 		$builder->createMenu('left');
 		$this->assertTrue($builder->hasMenu('left'));
-		$this->assertInstanceOf('anlutro\Menu\Collection', $builder->getMenu('left'));
+		$this->assertInstanceOf('bs4menu\Collection', $builder->getMenu('left'));
 	}
 
 	public function testGetNested()

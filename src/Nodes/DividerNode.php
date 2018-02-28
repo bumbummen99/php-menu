@@ -7,7 +7,7 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu\Nodes;
+namespace bs4menu\Nodes;
 
 class DividerNode implements NodeInterface
 {

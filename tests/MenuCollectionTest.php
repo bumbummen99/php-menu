@@ -1,5 +1,5 @@
 <?php
-namespace anlutro\Menu\Tests;
+namespace bs4menu\Tests;
 
 use PHPUnit_Framework_TestCase;
 
@@ -7,7 +7,7 @@ class MenuCollectionTest extends PHPUnit_Framework_TestCase
 {
 	public function makeCollection()
 	{
-		return new \anlutro\Menu\Collection(new \anlutro\Menu\Builder());
+		return new \bs4menu\Collection(new \bs4menu\Builder());
 	}
 
 	public function testAddedItemsAreStored()
@@ -30,11 +30,11 @@ class MenuCollectionTest extends PHPUnit_Framework_TestCase
 		$coll->addItem('Second Item', '/bar-baz');
 
 		$item = $coll->getItem('test-item');
-		$this->assertInstanceOf('anlutro\Menu\Nodes\AnchorNode', $item);
+		$this->assertInstanceOf('bs4menu\Nodes\AnchorNode', $item);
 		$this->assertEquals('/foo-bar', $item->getUrl());
 
 		$item = $coll->getItem('second-item');
-		$this->assertInstanceOf('anlutro\Menu\Nodes\AnchorNode', $item);
+		$this->assertInstanceOf('bs4menu\Nodes\AnchorNode', $item);
 		$this->assertEquals('/bar-baz', $item->getUrl());
 
 		$this->assertEquals(null, $coll->getItem('nonexistant'));

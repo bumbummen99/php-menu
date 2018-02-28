@@ -7,7 +7,7 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu\Nodes;
+namespace bs4menu\Nodes;
 
 interface NodeInterface
 {
@@ -42,7 +42,7 @@ interface NodeInterface
 	/**
 	 * Get the node's icon.
 	 *
-	 * @return \anlutro\Menu\Icons\IconInterface|null
+	 * @return \bs4menu\Icons\IconInterface|null
 	 */
 	public function getIcon();
 }

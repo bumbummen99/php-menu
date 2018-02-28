@@ -7,9 +7,9 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu\Nodes;
+namespace bs4menu\Nodes;
 
-use anlutro\Menu\Collection;
+use bs4menu\Collection;
 
 /**
  * A menu submenu item.
@@ -19,13 +19,13 @@ class SubmenuNode extends AbstractNode implements NodeInterface
 	/**
 	 * The submenu items.
 	 *
-	 * @var \anlutro\Menu\Collection
+	 * @var \bs4menu\Collection
 	 */
 	protected $submenu;
 
 	/**
 	 * @param string $title
-	 * @param \anlutro\Menu\Collection $submenu
+	 * @param \bs4menu\Collection $submenu
 	 * @param array  $attributes
 	 */
 	public function __construct($title, Collection $submenu, array $attributes = array())
@@ -38,7 +38,7 @@ class SubmenuNode extends AbstractNode implements NodeInterface
 	/**
 	 * Get the item's submenu.
 	 *
-	 * @return \anlutro\Menu\Collection
+	 * @return \bs4menu\Collection
 	 */
 	public function getSubmenu()
 	{

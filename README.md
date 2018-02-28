@@ -10,7 +10,7 @@ PHP framework agnostic. The default renderer uses Bootstrap 3 class names and ma
 
 #### Laravel 4
 
-Add `anlutro\Menu\ServiceProvider` to the list of providers in app/config/app.php. Optionally, add an alias for `'Menu' => 'anlutro\Menu\Facade'` as well. The menu builder instance can be accessed via the facade or via automatic dependency injection by type hinting.
+Add `bs4menu\ServiceProvider` to the list of providers in app/config/app.php. Optionally, add an alias for `'Menu' => 'bs4menu\Facade'` as well. The menu builder instance can be accessed via the facade or via automatic dependency injection by type hinting.
 
 Do `artisan config:publish anlutro/menu` to change the default Bootstrap 3-specific settings.
 
@@ -19,7 +19,7 @@ Do `artisan config:publish anlutro/menu` to change the default Bootstrap 3-speci
 Set up a shared instance of Menu\Builder. Create the menus you need.
 
 ```php
-$builder = new anlutro\Menu\Builder;
+$builder = new bs4menu\Builder;
 $menu = $builder->createMenu('left');
 ```
 
@@ -52,7 +52,7 @@ When you want to render a menu, call render($menu) and echo it.
 echo $builder->render('left');
 ```
 
-By default, Bootstrap 3-specific classes are used. If you want to use something else, you need to create your own class implementation of `anlutro\Menu\Renderers\RendererInterface` and either do `$builder->setDefaultRenderer('MyRenderer')` or `$builder->render('name_of_menu', $myRenderer)`.
+By default, Bootstrap 3-specific classes are used. If you want to use something else, you need to create your own class implementation of `bs4menu\Renderers\RendererInterface` and either do `$builder->setDefaultRenderer('MyRenderer')` or `$builder->render('name_of_menu', $myRenderer)`.
 
 ## Contact
 

@@ -7,7 +7,7 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu;
+namespace bs4menu;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -15,13 +15,13 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
 	public function register()
 	{
-		$this->app->bindShared('anlutro\Menu\Builder', function($app) {
+		$this->app->bindShared('bs4menu\Builder', function($app) {
 			return new Builder();
 		});
 	}
 
 	public function provides()
 	{
-		return array('anlutro\Menu\Builder');
+		return array('bs4menu\Builder');
 	}
 }

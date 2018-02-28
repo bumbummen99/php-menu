@@ -7,9 +7,9 @@
  * @package  php-menu
  */
 
-namespace anlutro\Menu\Renderers;
+namespace bs4menu\Renderers;
 
-use anlutro\Menu\Collection;
+use bs4menu\Collection;
 
 interface RendererInterface
 {
